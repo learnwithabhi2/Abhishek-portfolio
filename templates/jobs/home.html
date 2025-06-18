@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<nav>
+  <ul>
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="/admin/login/?next=/submission/">Submissions</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <img src="{% static 'images/profile.jpg' %}" alt="My Photo" class="profile" />
+
+  <h1>Abhishek Jha – Software Engineer</h1>
+  <p>
+    📞 +91-8440839852 | 📧 abhishekjha2k@gmail.com | Delhi <br />
+    <a
+      href="https://www.linkedin.com/in/your-link"
+      target="_blank"
+      style="color: #4fc3f7"
+      >LinkedIn</a
+    >
+    |
+    <a
+      href="https://github.com/your-github"
+      target="_blank"
+      style="color: #4fc3f7"
+      >GitHub</a
+    >
+  </p>
+
+  <h2>About Me</h2>
+  <p>
+    3+ years of experience building cloud-native infrastructure, automating
+    CI/CD pipelines, and ensuring 24/7 uptime with tools like Jenkins, Docker,
+    Kubernetes, and Linux.
+  </p>
+
+  <h3>Key Skills</h3>
+  <p>
+    Azure | AWS | Docker | Kubernetes | Jenkins | Git | Shell Scripting | Linux
+    (Red Hat, Ubuntu) |<br />
+    Grafana | Prometheus | Nginx | Apache | Terraform | CI/CD | SRE | DevOps |
+    Jira | Slack
+  </p>
+
+  <h2>Submit a Job Offer</h2>
+  <form method="post" action="{% url 'submit_offer' %}">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit">Submit Offer</button>
+  </form>
+</div>
+
+{% endblock %}

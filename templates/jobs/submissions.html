@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+<h2>Submitted Job Offers</h2>
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Email</th>
+    <th>Designation</th>
+    <th>Package</th>
+    <th>Notice Period</th>
+    <th>Work Location</th>
+  </tr>
+  {% for job in submissions %}
+  <tr>
+    <td>{{ job.company_name }}</td>
+    <td>{{ job.Email }}</td>
+    <td>{{ job.designation }}</td>
+    <td>{{ job.package }}</td>
+    <td>{{ job.notice_period }}</td>
+    <td>{{ job.work_location }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
