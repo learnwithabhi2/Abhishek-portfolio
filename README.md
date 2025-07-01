@@ -5,7 +5,7 @@
 
 For your project—a personal portfolio website with Django, MongoDB, a job submission form, admin login, and resume integration—a **clear and informative README** helps showcase your work to recruiters, collaborators, or open-source users.
 
-Here’s a professional and tailored `README.md` description:
+Here’s a professional and tailored `README.md` description
 
 ---
 
